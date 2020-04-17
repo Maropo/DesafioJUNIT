@@ -1,0 +1,20 @@
+RM76459
+LUCAS MAROPO RODRIGUES
+
+JUNIT:
+	import junit.framework.TestCase;
+	import org.junit.*;
+
+	public class TesteJulgamentoPrisioneiro extends TestCase{
+		@Test
+		public void testCalculaPena() {
+			String respostaPrisioneiroA = "Inocente"; 
+			String respostaPrisioneiroB = "Inocente"; 
+			JulgamentoPrisioneiro julgamento = new JulgamentoPrisioneiro(); 
+			
+			int resultadoEsperado = 0; 
+			int resultadoReal = julgamento.calculaPena(respostaPrisioneiroA, respostaPrisioneiroB);
+			
+			assertEquals(resultadoEsperado, resultadoReal);
+		}
+	}
